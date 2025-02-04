@@ -36,10 +36,17 @@ function enviarWhatsApp() {
 
     const fecha = document.getElementById("fecha").value;
     const culto = document.getElementById("culto").value;
+    const asistenciaAdultos = document.getElementById("adultos").value;
+    const asistenciaNinos = document.getElementById("ninos").value;
     const totalAsistencias = document.getElementById("totalAsistencias").value;
+    const profesionesDeFe = document.getElementById("profesiones").value;
+    const ofrendas = document.getElementById("ofrendas").value;
+    const diezmos = document.getElementById("diezmos").value;
+    const sobresDiezmo = document.getElementById("sobres").value;
+    const siembras = document.getElementById("siembras").value;
     const totalDinero = document.getElementById("totalDinero").value;
 
-    const mensaje = `Estadísticas de Culto:\nFecha: ${fecha}\nCulto: ${culto}\nTotal Asistencias: ${totalAsistencias}\nTotal Diezmos y Ofrendas: $${totalDinero}`;
+    const mensaje = `*Estadísticas de Culto ${culto}*\n\nFecha: ${fecha}\n\nCantidad de Adultos: ${asistenciaAdultos}\nCantidad de Niños: ${asistenciaNinos}\n*Total Asistencias: ${totalAsistencias}*\n\nOfrendas: $${ofrendas}\nDiezmos: $${diezmos}\nSobres de Diezmos: ${sobresDiezmo}\nsiembras: $${siembras}\n*Total Diezmos y Ofrendas: $${totalDinero}*`;
     
     window.open(`https://wa.me/503${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
