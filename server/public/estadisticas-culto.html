@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Culto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Estadísticas de Culto</h2>
+        <form id="cultoForm">
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha:</label>
+                <input type="date" id="fecha" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="culto" class="form-label">Nombre del Culto:</label>
+                <select id="culto" class="form-control" required>
+                    <option value="">Seleccione un culto</option>
+                    <option value="Familias en Victoria">Familias en Victoria</option>
+                    <option value="Estudio Bíblico">Estudio Bíblico</option>
+                    <option value="Noche de fe">Noche de fe</option>
+                    <option value="Mujeres de Fe">Mujeres de Fe</option>
+                    <option value="Jóvenes en victoria">Jóvenes en victoria</option>
+                    <option value="Amaneciendo con Dios">Amaneciendo con Dios</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="adultos" class="form-label">Asistencia Adultos:</label>
+                <input type="number" id="adultos" class="form-control" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="ninos" class="form-label">Asistencia Niños:</label>
+                <input type="number" id="ninos" class="form-control" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Total Asistencias:</label>
+                <input type="text" id="totalAsistencias" class="form-control" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="profesiones" class="form-label">Profesiones de Fe:</label>
+                <input type="number" id="profesiones" class="form-control" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="ofrendas" class="form-label">Ofrendas:</label>
+                <input type="number" id="ofrendas" class="form-control" step="0.01" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="diezmos" class="form-label">Diezmos:</label>
+                <input type="number" id="diezmos" class="form-control" step="0.01" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="sobres" class="form-label">Cantidad de Sobres de Diezmos:</label>
+                <input type="number" id="sobres" class="form-control" min="0">
+            </div>
+            <div class="mb-3">
+                <label for="siembras" class="form-label">Siembras:</label>
+                <input type="number" id="siembras" class="form-control" step="0.01" min="0">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Total Diezmos y Ofrendas:</label>
+                <input type="text" id="totalDinero" class="form-control" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Número de Teléfono:</label>
+                <input type="text" id="telefono" class="form-control" pattern="\d{8}" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="enviarWhatsApp()">Enviar</button>
+            <button type="button" class="btn btn-danger" onclick="cancelarFormulario()">Cancelar</button>
+        </form>
+    </div>
+    <script src="js/culto.js"></script>
+</body>
+</html>
