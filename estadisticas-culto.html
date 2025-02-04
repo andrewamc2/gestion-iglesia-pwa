@@ -32,7 +32,7 @@
             </div>            
             <div class="mb-3">
                 <label for="ninos" class="form-label">Asistencia Niños:</label>
-                <input type="number" id="ninos" class="form-control" min="0" required>
+                <input type="number" id="ninos" class="form-control" min="0" required inputmode="numeric" pattern="[0-9]*">
             </div>
             <div class="mb-3">
                 <label class="form-label">Total Asistencias:</label>
@@ -40,19 +40,19 @@
             </div>
             <div class="mb-3">
                 <label for="profesiones" class="form-label">Profesiones de Fe:</label>
-                <input type="number" id="profesiones" class="form-control" min="0">
+                <input type="number" id="profesiones" class="form-control" min="0" required inputmode="numeric" pattern="[0-9]*">
             </div>
             <div class="mb-3">
                 <label for="ofrendas" class="form-label">Ofrendas:</label>
-                <input type="number" id="ofrendas" class="form-control" step="0.01" min="0">
+                <input type="number" id="ofrendas" class="form-control" min="0" required inputmode="numeric" step="0.01">
             </div>
             <div class="mb-3">
                 <label for="diezmos" class="form-label">Diezmos:</label>
-                <input type="number" id="diezmos" class="form-control" step="0.01" min="0">
+                <input type="number" id="diezmos" class="form-control" min="0" required inputmode="numeric" step="0.01">
             </div>
             <div class="mb-3">
                 <label for="sobres" class="form-label">Cantidad de Sobres de Diezmos:</label>
-                <input type="number" id="sobres" class="form-control" min="0">
+                <input type="number" id="sobres" class="form-control" min="0" required inputmode="numeric" pattern="[0-9]*">
             </div>
             <div class="mb-3">
                 <label for="siembras" class="form-label">Siembras:</label>
