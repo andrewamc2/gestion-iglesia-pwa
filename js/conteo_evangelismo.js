@@ -28,3 +28,11 @@ function cancelarFormulario() {
     document.getElementById("evangelismoForm").reset();
     window.location.href = "index.html"; // Regresa a la pantalla principal
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fechaInput = document.getElementById("fecha");
+    if (fechaInput) {
+        const today = new Date().toISOString().split("T")[0]; // Obtiene la fecha actual en formato YYYY-MM-DD
+        fechaInput.value = today; // Asigna la fecha al campo
+    }
+});

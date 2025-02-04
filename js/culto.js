@@ -28,6 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function enviarWhatsApp() {
+
+    const culto = document.getElementById("culto").value;
+    if (culto === "") {
+        alert("Por favor, seleccione un culto.");
+        return;
+    }
+
+    const asistenciaAdultos = document.getElementById("adultos").value;
+    if (asistenciaAdultos === "") {
+        alert("Por favor, ingrese la cantidad de asistencia de adultos.");
+        return;
+    }
+
+
     const telefono = document.getElementById("telefono").value.trim();
     if (telefono.length !== 8) {
         alert("Ingrese un número de teléfono válido de 8 dígitos.");
@@ -35,8 +49,8 @@ function enviarWhatsApp() {
     }
 
     const fecha = document.getElementById("fecha").value;
-    const culto = document.getElementById("culto").value;
-    const asistenciaAdultos = document.getElementById("adultos").value;
+    
+    
     const asistenciaNinos = document.getElementById("ninos").value;
     const totalAsistencias = document.getElementById("totalAsistencias").value;
     const profesionesDeFe = document.getElementById("profesiones").value;
