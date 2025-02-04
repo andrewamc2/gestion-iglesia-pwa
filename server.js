@@ -10,23 +10,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/')));
 
 // Rutas para servir las páginas HTML
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, '/', 'index.html'));
 });
 
 app.get('/estadisticas-culto', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'estadisticas-culto.html'));
+    res.sendFile(path.join(__dirname, '/', 'estadisticas-culto.html'));
 });
 
 app.get('/conteo-evangelismo', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'conteo-evangelismo.html'));
+    res.sendFile(path.join(__dirname, '/', 'conteo-evangelismo.html'));
 });
 
 app.get('/ventas-jovenes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'ventas-jovenes.html'));
+    res.sendFile(path.join(__dirname, '/', 'ventas-jovenes.html'));
 });
 
 // Iniciar el servidor
