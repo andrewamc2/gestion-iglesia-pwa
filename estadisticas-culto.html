@@ -44,11 +44,12 @@
             </div>
             <div class="mb-3">
                 <label for="ofrendas" class="form-label">Ofrendas:</label>
-                <input type="number" id="ofrendas" class="form-control" min="0" required inputmode="numeric" step="0.01">
+                <input type="number" id="ofrendas" class="form-control" min="0" required inputmode="decimal" pattern="\d*\.?\d+" step="any">
+
             </div>
             <div class="mb-3">
                 <label for="diezmos" class="form-label">Diezmos:</label>
-                <input type="number" id="diezmos" class="form-control" min="0" required inputmode="numeric" step="0.01">
+                <input type="number" id="diezmos" class="form-control" min="0" required inputmode="decimal" pattern="\d*\.?\d+" step="any">
             </div>
             <div class="mb-3">
                 <label for="sobres" class="form-label">Cantidad de Sobres de Diezmos:</label>
@@ -56,7 +57,7 @@
             </div>
             <div class="mb-3">
                 <label for="siembras" class="form-label">Siembras:</label>
-                <input type="number" id="siembras" class="form-control" step="0.01" min="0">
+                <input type="number" id="siembras" class="form-control" min="0" required inputmode="decimal" pattern="\d*\.?\d+" step="any">
             </div>
             <div class="mb-3">
                 <label class="form-label">Total Diezmos y Ofrendas:</label>
