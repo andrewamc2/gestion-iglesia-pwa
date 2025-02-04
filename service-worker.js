@@ -1,4 +1,4 @@
-const CACHE_NAME = "iglesia-cache-v1";
+const CACHE_NAME = "tabernc-v1";
 const urlsToCache = [
     "index.html",
     "estadisticas_culto.html",
