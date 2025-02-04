@@ -1,6 +1,6 @@
 {
-    "name": "Gestión de Iglesia",
-    "short_name": "IglesiaPWA",
+    "name": "Gestión de Iglesia Tabernc",
+    "short_name": "TaberncPWA",
     "description": "App para gestionar estadísticas de culto, evangelismo y ventas de jóvenes",
     "start_url": "index.html",
     "display": "standalone",
