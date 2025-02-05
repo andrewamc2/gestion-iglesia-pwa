@@ -45,7 +45,6 @@
             <div class="mb-3">
                 <label for="ofrendas" class="form-label">Ofrendas:</label>
                 <input type="number" id="ofrendas" class="form-control" min="0" required inputmode="decimal" pattern="\d*\.?\d+" step="any">
-
             </div>
             <div class="mb-3">
                 <label for="diezmos" class="form-label">Diezmos:</label>
@@ -65,9 +64,8 @@
             </div>
             <div class="mb-3">
                 <label for="telefono" class="form-label">Número de Teléfono:</label>
-                <input type="number" id="telefono" class="form-control" min="0" required inputmode="numeric" pattern="[0-9]*">
-            </div> 
-
+                <input type="number" id="telefono" class="form-control" min="0" required inputmode="numeric" pattern="\\d{8}">
+            </div>
             <button type="button" class="btn btn-primary" onclick="enviarWhatsApp()">Enviar</button>
             <button type="button" class="btn btn-danger" onclick="cancelarFormulario()">Cancelar</button>
         </form>
