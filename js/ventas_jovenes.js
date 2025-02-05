@@ -14,6 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function enviarWhatsApp() {
+
+    const gastos = parseFloat(document.getElementById("gastos").value);
+    if (isNaN(gastos) || gastos < 0) {
+        alert("Ingrese un monto válido para los gastos del día.");
+        document.getElementById("gastos").focus();
+        return;
+    }
+
+    const vendido = parseFloat(document.getElementById("vendido").value);
+    if (isNaN(vendido) || vendido <= 0) {
+        alert("Ingrese un monto válido para las ventas del día.");
+        document.getElementById("vendido").focus();
+        return;
+    }
+
     const telefono = document.getElementById("telefono").value.trim();
     if (telefono.length !== 8) {
         alert("Ingrese un número de teléfono válido de 8 dígitos.");
@@ -21,11 +36,10 @@ function enviarWhatsApp() {
     }
 
     const fecha = document.getElementById("fecha").value;
-    const gastos = document.getElementById("gastos").value;
-    const vendido = document.getElementById("vendido").value;
+    
     const total = document.getElementById("total").value;
 
-    const mensaje = `Ventas de Jóvenes:\nFecha: ${fecha}\nGastos: $${gastos}\nVendido: $${vendido}\nTotal: $${total}`;
+    const mensaje = `*Ventas de Jóvenes*\n\nFecha: ${fecha}\n\nGastos: $${gastos}\nVendido: $${vendido}\n\n*Total: $${total}*`;
     
     window.open(`https://wa.me/503${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }

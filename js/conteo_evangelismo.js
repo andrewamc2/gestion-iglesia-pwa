@@ -34,7 +34,7 @@ function enviarWhatsApp() {
     const profesiones = document.getElementById("profesiones").value;
     const confrontados = document.getElementById("confrontados").value;
 
-    const mensaje = `*Conteo de Evangelismo*\n\nFecha: ${fecha}\n\n*Lugar: ${lugar}*\nServidores: ${servidores}\nNiños: ${ninos}\nConfrontados: ${confrontados}\n*Profesiones de Fe: ${profesiones}*`;
+    const mensaje = `*Conteo de Evangelismo*\n\nFecha: ${fecha}\n*Lugar: ${lugar}*\n\nServidores: ${servidores}\nNiños: ${ninos}\nConfrontados: ${confrontados}\n*Profesiones de Fe: ${profesiones}*`;
     
     window.open(`https://wa.me/503${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
