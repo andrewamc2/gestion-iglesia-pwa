@@ -71,6 +71,12 @@
                 e.preventDefault(); // Evita que el doble toque active el zoom
             }, { passive: false });
         });
+
+        // Previene zoom solo en doble tap, pero permite clics normales
+        document.querySelectorAll('.zoom-fix').forEach(btn => {
+            btn.addEventListener('dblclick', (e) => e.preventDefault(), { passive: false });
+        });
+
     </script>
 </body>
 </html>
