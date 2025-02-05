@@ -8,12 +8,15 @@ function enviarWhatsApp() {
 
     
     const lugarInput = document.getElementById("lugar");
-    const lugar = lugarInput.value;
+    let lugar = lugarInput.value.trim(); // Elimina espacios en blanco
+
     if (lugar === "") {
         alert("Por favor, ingrese el lugar de evangelismo.");
-        lugarInput.focus(); // Establece el foco en el campo
+        lugarInput.focus();
         return;
     }
+    lugar = lugar.toUpperCase(); // Convertir a mayúsculas
+    lugarInput.value = lugar; // Asignar el nuevo valor al campo
     
     const telefonoInput = document.getElementById("telefono");
     const telefono = telefonoInput.value.trim();
@@ -31,7 +34,7 @@ function enviarWhatsApp() {
     const profesiones = document.getElementById("profesiones").value;
     const confrontados = document.getElementById("confrontados").value;
 
-    const mensaje = `Conteo de Evangelismo:\nFecha: ${fecha}\nLugar: ${lugar}\nServidores: ${servidores}\nNiños: ${ninos}\nProfesiones de Fe: ${profesiones}\nConfrontados: ${confrontados}`;
+    const mensaje = `*Conteo de Evangelismo*\n\nFecha: ${fecha}\n\n*Lugar: ${lugar}*\nServidores: ${servidores}\nNiños: ${ninos}\nConfrontados: ${confrontados}\n*Profesiones de Fe: ${profesiones}*`;
     
     window.open(`https://wa.me/503${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
