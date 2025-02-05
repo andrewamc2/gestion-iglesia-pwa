@@ -66,12 +66,6 @@
     </div>
     <script src="js/conteo_evangelismo.js"></script>
     <script>
-        document.querySelectorAll('.zoom-fix').forEach(btn => {
-            btn.addEventListener('touchstart', (e) => {
-                e.preventDefault(); // Evita que el doble toque active el zoom
-            }, { passive: false });
-        });
-
         // Previene zoom solo en doble tap, pero permite clics normales
         document.querySelectorAll('.zoom-fix').forEach(btn => {
             btn.addEventListener('dblclick', (e) => e.preventDefault(), { passive: false });
