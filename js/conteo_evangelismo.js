@@ -5,14 +5,27 @@ function modificarValor(id, cambio) {
 }
 
 function enviarWhatsApp() {
-    const telefono = document.getElementById("telefono").value.trim();
-    if (telefono.length !== 8) {
+
+    
+    const lugarInput = document.getElementById("lugar");
+    const lugar = lugarInput.value;
+    if (lugar === "") {
+        alert("Por favor, ingrese el lugar de evangelismo.");
+        lugarInput.focus(); // Establece el foco en el campo
+        return;
+    }
+    
+    const telefonoInput = document.getElementById("telefono");
+    const telefono = telefonoInput.value.trim();
+
+    if (telefono.length !== 8 || isNaN(telefono)) {
         alert("Ingrese un número de teléfono válido de 8 dígitos.");
+        telefonoInput.focus(); // Poner el foco en el campo de entrada
         return;
     }
 
     const fecha = document.getElementById("fecha").value;
-    const lugar = document.getElementById("lugar").value;
+    
     const servidores = document.getElementById("servidores").value;
     const ninos = document.getElementById("ninos").value;
     const profesiones = document.getElementById("profesiones").value;
