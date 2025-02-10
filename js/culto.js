@@ -60,7 +60,7 @@ function enviarWhatsApp() {
     const siembras = document.getElementById("siembras").value;
     const totalDinero = document.getElementById("totalDinero").value;
 
-    const mensaje = `*Estadísticas de Culto ${culto}*\n\nFecha: ${fecha}\n\nCantidad de Adultos: ${asistenciaAdultos}\nCantidad de Niños: ${asistenciaNinos}\n*Total Asistencias: ${totalAsistencias}*\n\n*Profesiones de fe: ${profesionesDeFe}*\n\nOfrendas: $${ofrendas}\nDiezmos: $${diezmos}\nSobres de Diezmos: ${sobresDiezmo}\nSiembras: $${siembras}\n*Total Diezmos y Ofrendas: $${totalDinero}*`;
+    const mensaje = `*Estadísticas de Culto ${culto}*\n\nFecha: ${fecha}\n\nCantidad de Adultos: ${asistenciaAdultos}\nCantidad de Niños: ${asistenciaNinos}\n*Total Asistencias: ${totalAsistencias}*\n\nProfesiones de fe: *${profesionesDeFe}*\n\nOfrendas: $${ofrendas}\nDiezmos: $${diezmos}\nSobres de Diezmos: ${sobresDiezmo}\nSiembras: $${siembras}\n*Total Diezmos y Ofrendas: $${totalDinero}*`;
     
     window.open(`https://wa.me/503${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
