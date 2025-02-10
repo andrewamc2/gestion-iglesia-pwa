@@ -77,3 +77,45 @@ document.addEventListener("DOMContentLoaded", function () {
         fechaInput.value = today; // Asigna la fecha al campo
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll("#cultoForm input, #cultoForm select");
+
+    inputs.forEach(input => {
+        input.addEventListener("input", function () {
+            if (this.value.trim() !== "") {
+                this.style.backgroundColor = "#fff9c4"; // Amarillo claro
+            } else {
+                this.style.backgroundColor = ""; // Restaura el color por defecto
+            }
+        });
+    });
+
+    const adultosInput = document.getElementById("adultos");
+    const ninosInput = document.getElementById("ninos");
+    const totalAsistenciasInput = document.getElementById("totalAsistencias");
+    const ofrendasInput = document.getElementById("ofrendas");
+    const diezmosInput = document.getElementById("diezmos");
+    const siembrasInput = document.getElementById("siembras");
+    const totalDineroInput = document.getElementById("totalDinero");
+
+    function calcularTotalAsistencias() {
+        const adultos = parseInt(adultosInput.value) || 0;
+        const ninos = parseInt(ninosInput.value) || 0;
+        totalAsistenciasInput.value = adultos + ninos;
+        totalAsistenciasInput.style.backgroundColor = "#fff9c4";
+    }
+
+    function calcularTotalDinero() {
+        const ofrendas = parseFloat(ofrendasInput.value) || 0;
+        const diezmos = parseFloat(diezmosInput.value) || 0;
+        const siembras = parseFloat(siembrasInput.value) || 0;
+        totalDineroInput.value = (ofrendas + diezmos + siembras).toFixed(2);
+        totalDineroInput.style.backgroundColor = "#fff9c4";
+    }
+
+    adultosInput.addEventListener("input", calcularTotalAsistencias);
+    ninosInput.addEventListener("input", calcularTotalAsistencias);
+    ofrendasInput.addEventListener("input", calcularTotalDinero);
+    diezmosInput.addEventListener("input", calcularTotalDinero);
+    siembrasInput.addEventListener("input", calcularTotalDinero);
+});
