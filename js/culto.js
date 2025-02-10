@@ -41,13 +41,6 @@ function enviarWhatsApp() {
         return;
     }
 
-
-    const telefono = document.getElementById("telefono").value.trim();
-    if (telefono.length !== 8) {
-        alert("Ingrese un número de teléfono válido de 8 dígitos.");
-        return;
-    }
-
     const fecha = document.getElementById("fecha").value;
     
     
@@ -62,7 +55,7 @@ function enviarWhatsApp() {
 
     const mensaje = `*Estadísticas de Culto ${culto}*\n\nFecha: ${fecha}\n\nCantidad de Adultos: ${asistenciaAdultos}\nCantidad de Niños: ${asistenciaNinos}\n*Total Asistencias: ${totalAsistencias}*\n\nProfesiones de fe: *${profesionesDeFe}*\n\nOfrendas: $${ofrendas}\nDiezmos: $${diezmos}\nSobres de Diezmos: ${sobresDiezmo}\nSiembras: $${siembras}\n*Total Diezmos y Ofrendas: $${totalDinero}*`;
     
-    window.open(`https://wa.me/503${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
+    window.open(`https://wa.me/50377878107?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
 function cancelarFormulario() {
